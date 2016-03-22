@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<h1>Kategori: {{ page.tag }}</h1>
+<div>
+  <div class="bundle row gutters fadeInDown animated">
+    {% if site.tags[page.tag] %}
+        {% for post in site.tags[page.tag] %}
+
+        <center>   <h1><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date_to_string }}</time><br>
+          <a href="http://www.abdullahvelioglu.com/blog{{ post.url }}" cols="50" rows="5" style="border:6px solid ">{{ post.title }}</a></h1></center>
+<div class="bundle row gutters fadeInDown animated">
+        {% endfor %}
+    {% else %}
+        <p>{{ page.tag }} hakkında bir gönderi bulunamadı.</p>
+        <div class="bundle row gutters fadeInDown animated">
+    {% endif %}
+</div>
