@@ -1,15 +1,16 @@
 ---
 layout: default
 ---
-
+<center>
 <h1>Kategori: {{ page.tag }}</h1>
 <div>
   <div class="bundle row gutters fadeInDown animated">
     {% if site.tags[page.tag] %}
         {% for post in site.tags[page.tag] %}
 
-        <center>   <h1><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date_to_string }}</time><br>
-          <a href="http://www.abdullahvelioglu.com/blog{{ post.url }}" cols="50" rows="5" style="border:6px solid ">{{ post.title }}</a></h1></center>
+        <center>   <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date_to_string }}</time><br>
+          <a href="http://www.abdullahvelioglu.com/blog{{ post.url }}" cols="20" rows="5" style="border:4px solid ">{{ post.title }}</a></center>
+<br>
 <div class="bundle row gutters fadeInDown animated">
         {% endfor %}
     {% else %}
@@ -17,3 +18,5 @@ layout: default
         <div class="bundle row gutters fadeInDown animated">
     {% endif %}
 </div>
+</center>
+
