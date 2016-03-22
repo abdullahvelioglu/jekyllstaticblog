@@ -1,0 +1,8 @@
+- url: /blog
+  title: Blog
+
+- url: /blog/about
+  title: Hakkinda
+
+- url: /blog/category
+  title: Kategori
